@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Bee App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="background-image"></div>
+    <div class="logo">
+      <img src="images/bee.webp" alt="Logo" width="150">
+    </div>
+    <h1>Spelling Bee App</h1>
+    <h4>for Andre's practice</h4>
+    <h3>Support alphabet</h3>
+    <div class="abc">
+      <ul>
+          <li onclick="playVowel('a')">a</li>
+          <li onclick="playVowel('b')">b</li>
+          <li onclick="playVowel('c')">c</li>
+          <li onclick="playVowel('d')">d</li>
+          <li onclick="playVowel('e')">e</li>
+          <li onclick="playVowel('f')">f</li>
+          <li onclick="playVowel('g')">g</li>
+          <li onclick="playVowel('h')">h</li>
+          <li onclick="playVowel('i')">i</li>
+          <li onclick="playVowel('j')">j</li>
+          <li onclick="playVowel('k')">k</li>
+          <li onclick="playVowel('l')">l</li>
+          <li onclick="playVowel('m')">m</li>
+          <li onclick="playVowel('n')">n</li>
+          <li onclick="playVowel('o')">o</li>
+          <li onclick="playVowel('p')">p</li>
+          <li onclick="playVowel('q')">q</li>
+          <li onclick="playVowel('r')">r</li>
+          <li onclick="playVowel('s')">s</li>
+          <li onclick="playVowel('t')">t</li>
+          <li onclick="playVowel('u')">u</li>
+          <li onclick="playVowel('v')">v</li>
+          <li onclick="playVowel('w')">w</li>
+          <li onclick="playVowel('x')">x</li>
+          <li onclick="playVowel('y')">y</li>
+          <li onclick="playVowel('z')">z</li>
+      </ul>
+    </div>
+    <h3>Words to practice</h3>
+    <div class="word-list">
+      <ul>
+        <li onclick="showPronunciation('alphabetically')">alphabetically</li>
+        <li onclick="showPronunciation('anxious')">anxious</li>
+        <li onclick="showPronunciation('balance beam')">balance beam</li>
+        <li onclick="showPronunciation('bathing suit')">bathing suit</li>
+        <li onclick="showPronunciation('crossword puzzle')">crossword puzzle</li>
+        <li onclick="showPronunciation('earthquake')">earthquake</li>
+        <li onclick="showPronunciation('European')">European</li>
+        <li onclick="showPronunciation('freeze')">freeze</li>
+        <li onclick="showPronunciation('frecuency')">frecuency</li>
+        <li onclick="showPronunciation('interviewed')">interviewed</li>
+        <li onclick="showPronunciation('January')">January</li>
+        <li onclick="showPronunciation('Mothers Day')">Mothers Day</li>
+        <li onclick="showPronunciation('neighborhood')">neighborhood</li>
+        <li onclick="showPronunciation('North Pole')">North Pole</li>
+        <li onclick="showPronunciation('overweight')">overweight</li>
+        <li onclick="showPronunciation('rattlesnake')">rattlesnake</li>
+        <li onclick="showPronunciation('security guard')">security guard</li>
+        <li onclick="showPronunciation('snowflakes')">snowflakes</li>
+        <li onclick="showPronunciation('stomachache')">stomachache</li>
+        <li onclick="showPronunciation('sympathetic')">sympathetic</li>
+        <li onclick="showPronunciation('teaspoons')">teaspoons</li>
+        <li onclick="showPronunciation('themselves')">themselves</li>
+        <li onclick="showPronunciation('thought')">thought</li>
+        <li onclick="showPronunciation('understanding')">understanding</li>
+        <li onclick="showPronunciation('Wednesday')">Wednesday</li>
+      </ul>
+    </div>
+
+    <div class="pronunciation" id="pronunciation">
+      <h2>Pronunciation</h2>
+      <!-- Controles de audio para la pronunciación -->
+      <audio id="pronunciation_audio" controls>
+        <source src="" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="syllables" id="syllables">
+      <h2>Syllables</h2>
+      <!-- Controles de audio para las sílabas -->
+      <audio id="syllables_audio" controls onplay="highlightSyllables()">
+        <source src="" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <p id="selected_word"></p> <!-- Aquí se mostrará la palabra seleccionada -->
+    </div>
+    
+    <footer>"Desarrollado por Fernand J. Hanser"</footer>
+  </div>
+
+  <!-- Elementos de audio para las vocales -->
+  <audio id="vowel_audio_a" src="audios/abc/a.mp3"></audio>
+  <audio id="vowel_audio_b" src="audios/abc/b.mp3"></audio>
+  <audio id="vowel_audio_c" src="audios/abc/c.mp3"></audio>
+  <audio id="vowel_audio_d" src="audios/abc/d.mp3"></audio>
+  <audio id="vowel_audio_e" src="audios/abc/e.mp3"></audio>
+  <audio id="vowel_audio_f" src="audios/abc/f.mp3"></audio>
+  <audio id="vowel_audio_g" src="audios/abc/g.mp3"></audio>
+  <audio id="vowel_audio_h" src="audios/abc/h.mp3"></audio>
+  <audio id="vowel_audio_i" src="audios/abc/i.mp3"></audio>
+  <audio id="vowel_audio_j" src="audios/abc/j.mp3"></audio>
+  <audio id="vowel_audio_k" src="audios/abc/k.mp3"></audio>
+  <audio id="vowel_audio_l" src="audios/abc/l.mp3"></audio>
+  <audio id="vowel_audio_m" src="audios/abc/m.mp3"></audio>
+  <audio id="vowel_audio_n" src="audios/abc/n.mp3"></audio>
+  <audio id="vowel_audio_o" src="audios/abc/o.mp3"></audio>
+  <audio id="vowel_audio_p" src="audios/abc/p.mp3"></audio>
+  <audio id="vowel_audio_q" src="audios/abc/q.mp3"></audio>
+  <audio id="vowel_audio_r" src="audios/abc/r.mp3"></audio>
+  <audio id="vowel_audio_s" src="audios/abc/s.mp3"></audio>
+  <audio id="vowel_audio_t" src="audios/abc/t.mp3"></audio>
+  <audio id="vowel_audio_u" src="audios/abc/u.mp3"></audio>
+  <audio id="vowel_audio_v" src="audios/abc/v.mp3"></audio>
+  <audio id="vowel_audio_w" src="audios/abc/w.mp3"></audio>
+  <audio id="vowel_audio_x" src="audios/abc/x.mp3"></audio>
+  <audio id="vowel_audio_y" src="audios/abc/y.mp3"></audio>
+  <audio id="vowel_audio_z" src="audios/abc/z.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
