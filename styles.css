@@ -13,15 +13,19 @@ body {
 
 /* Estilo para la imagen superpuesta */
 .background-image {
-  position: fixed; /* Fija la imagen en la ventana del navegador */
+  position: fixed;
+  /* Fija la imagen en la ventana del navegador */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: url('images/panal.jpg');
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
-  opacity: 0.2; /* Ajusta la opacidad según sea necesario */
-  z-index: -1; /* Coloca la imagen detrás de todos los demás elementos */
+  background-size: cover;
+  /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+  opacity: 0.2;
+  /* Ajusta la opacidad según sea necesario */
+  z-index: -1;
+  /* Coloca la imagen detrás de todos los demás elementos */
 }
 
 
@@ -31,18 +35,19 @@ h1 {
   font-size: 100px;
   color: darkorange;
 }
-h3{
-font-size: 18px;
-margin-top: 40px;
-margin-bottom: 0px;
-color: darkorange;
+
+h3 {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  color: darkorange;
 }
 
 h4 {
   margin-top: 15px;
   margin-bottom: 20px;
   font-size: 18px;
-  color:#1168b9;
+  color: #1168b9;
 }
 
 .container {
@@ -62,7 +67,8 @@ h4 {
 .word-list ul li {
   display: inline-block;
   margin: 0 10px;
-  cursor: pointer; /* Cambia el cursor a pointer */
+  cursor: pointer;
+  /* Cambia el cursor a pointer */
   border: 1px solid #ccc;
   padding: 20px;
   margin: 0 auto;
@@ -74,7 +80,8 @@ h4 {
 
 .word-list ul li:hover,
 .word-list ul li:active {
-  background-color: darkorange; /* Cambia el color de fondo cuando se pasa el cursor o se hace clic */
+  background-color: darkorange;
+  /* Cambia el color de fondo cuando se pasa el cursor o se hace clic */
 }
 
 
@@ -91,7 +98,8 @@ h4 {
 .abc ul li {
   display: inline-block;
   margin: 0 10px;
-  cursor: pointer; /* Cambia el cursor a pointer */
+  cursor: pointer;
+  /* Cambia el cursor a pointer */
   border: 1px solid #ccc;
   padding: 20px;
   margin: 0 auto;
@@ -103,7 +111,8 @@ h4 {
 
 .abc ul li:hover,
 .abc ul li:active {
-  background-color: darkorange; /* Cambia el color de fondo cuando se pasa el cursor o se hace clic */
+  background-color: darkorange;
+  /* Cambia el color de fondo cuando se pasa el cursor o se hace clic */
 }
 
 
@@ -112,7 +121,7 @@ h4 {
   max-width: 300px;
   margin: 0 auto;
   background-color: #ccc;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .syllables {
@@ -143,17 +152,15 @@ footer {
 
 /* Estilo de resaltado */
 #syllables span.highlighted {
-  background-color: darkorange; /* Cambia el color de resaltado según tus preferencias */
+  background-color: darkorange;
+  /* Cambia el color de resaltado según tus preferencias */
 }
 
 p {
   font-size: 24px;
-  overflow: hidden; /* Oculta el texto que excede el tamaño del contenedor */
+  overflow: hidden;
+  /* Oculta el texto que excede el tamaño del contenedor */
   color: chocolate;
-  letter-spacing: 10px; /* Agrega espacio entre cada letra */
+  letter-spacing: 10px;
+  /* Agrega espacio entre cada letra */
 }
-
-
-
-
-

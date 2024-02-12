@@ -1,12 +1,10 @@
 // JavaScript
 
-
-// Función para reproducir los audios de las vocales
+// Función para reproducir los audios de las letras
 function playVowel(vowel) {
   const vowelAudio = document.getElementById('vowel_audio_' + vowel);
   vowelAudio.play();
 }
-
 
 function showPronunciation(word) {
   const pronunciationDiv = document.getElementById('pronunciation');
