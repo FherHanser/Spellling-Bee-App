@@ -30,20 +30,51 @@ function showPronunciation(word) {
   pronunciationAudio.play();
 }
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
   var modal = document.getElementById('modal');
   var modalWord = document.getElementById('modal-word');
   var closeButton = document.getElementsByClassName('close')[0];
   var showRandomWordButton = document.getElementById('show-random-word-button');
   var wordList = document.getElementById('word-list').getElementsByTagName('li');
+
+// Variable global para el tiempo restante del contador
+var remainingTime = 20;
+var elapsedTime = 0; // Tiempo transcurrido en el contador cuando se cierra antes
+
+// Función para mostrar el modal
+function showModal(word) {
+  modalWord.textContent = word;
+  modal.style.display = 'block';
   
-  // Función para mostrar el modal
-  function showModal(word) {
-    modalWord.textContent = word;
-    modal.style.display = 'block';
+  // Eliminar la cuenta regresiva anterior si existe
+  var previousCountdown = document.getElementById('countdown');
+  if (previousCountdown) {
+    previousCountdown.parentNode.removeChild(previousCountdown);
   }
+
+  elapsedTime = 0; // Restablecer el tiempo transcurrido a 0
+
+  // Mostrar el contador
+  var countdownDuration = remainingTime;
+  var countdownElement = document.createElement('div');
+  countdownElement.id = 'countdown';
+  countdownElement.textContent = countdownDuration + "s";
+  modal.getElementsByClassName('modal-content')[0].appendChild(countdownElement);
+
+  // Función para actualizar el contador cada segundo
+  var countdownInterval = setInterval(function() {
+    countdownDuration--;
+    countdownElement.textContent = countdownDuration + "s";
+    elapsedTime++; // Incrementar el tiempo transcurrido
+
+    if (countdownDuration <= 0) {
+      clearInterval(countdownInterval); // Detener el contador
+      modal.style.display = "none"; // Ocultar el modal
+    }
+  }, 1000); // Intervalo de actualización (cada segundo)
+}
+
+
 
   // Función para cerrar el modal
   function closeModal() {
@@ -69,4 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
+document.getElementById("show-random-word-button").addEventListener("click", function () {
+  var audio = document.getElementById("audio");
+  audio.play();
+});

@@ -211,24 +211,11 @@ p {
   font-size: 44px;
 }
 
-.butto:active {
-  background-color: #0e5c9e; /* Cambia el color de fondo cuando se presiona el botón */
+.button:active {
+  background-color: #0e5c9e;
+  /* Cambia el color de fondo cuando se presiona el botón */
 }
 
-.button2 {
-  display: inline-block;
-  padding: 40px 40px;
-  background-color: #1168b9;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  width: 400px;
-  font-size: 44px;
-}
 
 /* Estilos para el modal */
 .modal {
