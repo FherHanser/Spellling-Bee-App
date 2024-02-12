@@ -207,8 +207,8 @@ p {
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 40px;
-  width: 400px;
-  font-size: 44px;
+  width: 280px;
+  font-size: 24px;
 }
 
 .button:active {
