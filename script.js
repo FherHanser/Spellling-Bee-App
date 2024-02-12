@@ -31,3 +31,42 @@ function showPronunciation(word) {
 }
 
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById('modal');
+  var modalWord = document.getElementById('modal-word');
+  var closeButton = document.getElementsByClassName('close')[0];
+  var showRandomWordButton = document.getElementById('show-random-word-button');
+  var wordList = document.getElementById('word-list').getElementsByTagName('li');
+  
+  // Función para mostrar el modal
+  function showModal(word) {
+    modalWord.textContent = word;
+    modal.style.display = 'block';
+  }
+
+  // Función para cerrar el modal
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  // Evento para cerrar el modal al hacer clic en la X
+  closeButton.addEventListener('click', closeModal);
+
+  // Evento para cerrar el modal al hacer clic fuera del modal
+  window.addEventListener('click', function (event) {
+    if (event.target == modal) {
+      closeModal();
+    }
+  });
+
+  // Evento para mostrar una palabra aleatoria al hacer clic en el botón
+  showRandomWordButton.addEventListener('click', function () {
+    var randomIndex = Math.floor(Math.random() * wordList.length);
+    var randomWord = wordList[randomIndex].textContent;
+    showModal(randomWord);
+  });
+});
+
+
+

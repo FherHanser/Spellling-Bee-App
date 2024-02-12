@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spelling Bee App - Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="background-image"></div>
+    <div class="logo">
+      <img src="images/bee.webp" alt="Logo" width="150">
+    </div>
+    <h1>Spelling Bee App</h1>
+    <h4>for Andre's practice</h4>
+    <h3>Words to practice</h3>
+    <button id="show-random-word-button" class="button">SHOW WORD</button>
+    <a href="index.html" class="button2">GO BACK</a>
+    <div class="word-list-practice" style="display: none;">
+      <ul id="word-list">
+        <li onclick="showPronunciation('alphabetically')">alphabetically</li>
+        <li onclick="showPronunciation('anxious')">anxious</li>
+        <li onclick="showPronunciation('balance beam')">balance beam</li>
+        <li onclick="showPronunciation('bathing suit')">bathing suit</li>
+        <li onclick="showPronunciation('crossword puzzle')">crossword puzzle</li>
+        <li onclick="showPronunciation('earthquake')">earthquake</li>
+        <li onclick="showPronunciation('European')">European</li>
+        <li onclick="showPronunciation('freeze')">freeze</li>
+        <li onclick="showPronunciation('frecuency')">frecuency</li>
+        <li onclick="showPronunciation('interviewed')">interviewed</li>
+        <li onclick="showPronunciation('January')">January</li>
+        <li onclick="showPronunciation('Mothers Day')">Mothers Day</li>
+        <li onclick="showPronunciation('neighborhood')">neighborhood</li>
+        <li onclick="showPronunciation('North Pole')">North Pole</li>
+        <li onclick="showPronunciation('overweight')">overweight</li>
+        <li onclick="showPronunciation('rattlesnake')">rattlesnake</li>
+        <li onclick="showPronunciation('security guard')">security guard</li>
+        <li onclick="showPronunciation('snowflakes')">snowflakes</li>
+        <li onclick="showPronunciation('stomachache')">stomachache</li>
+        <li onclick="showPronunciation('sympathetic')">sympathetic</li>
+        <li onclick="showPronunciation('teaspoons')">teaspoons</li>
+        <li onclick="showPronunciation('themselves')">themselves</li>
+        <li onclick="showPronunciation('thought')">thought</li>
+        <li onclick="showPronunciation('understanding')">understanding</li>
+        <li onclick="showPronunciation('Wednesday')">Wednesday</li>
+      </ul>
+    </div>
+
+    <footer>"Desarrollado por Fernand J. Hanser"</footer>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-word"></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
