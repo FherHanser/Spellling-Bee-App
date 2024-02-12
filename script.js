@@ -1,5 +1,3 @@
-// JavaScript
-
 // Función para reproducir los audios de las letras
 function playVowel(vowel) {
   const vowelAudio = document.getElementById('vowel_audio_' + vowel);
