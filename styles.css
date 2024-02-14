@@ -211,10 +211,32 @@ p {
   font-size: 18px;
 }
 
-.button:active {
+.button:active,
+.button:hover {
   background-color: #0e5c9e;
   /* Cambia el color de fondo cuando se presiona el botón */
 }
+
+.button3 {
+  display: inline-block;
+  padding: 40px 40px;
+  background-color: darkorange;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 200px;
+  font-size: 18px;
+}
+
+.button3:active,
+.button3:hover {
+  background-color: chocolate;
+}
+
 
 
 /* Estilos para el modal */
@@ -254,4 +276,35 @@ p {
   color: white;
   text-decoration: none;
   cursor: pointer;
+}
+
+#modal {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  height: 100%;
+  /* Opcional: asegura que el modal ocupe toda la altura */
+}
+
+#user-input {
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 80%;
+  /* Anchura del input */
+  max-width: 400px;
+  /* Anchura máxima del input */
+}
+
+
+
+#user-input:focus {
+  border-color: dodgerblue;
+  /* Cambia el color del borde al enfocar */
 }

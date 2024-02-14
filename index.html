@@ -98,8 +98,13 @@
         <li onclick="playVowel('x')">x</li>
         <li onclick="playVowel('y')">y</li>
         <li onclick="playVowel('z')">z</li>
+        <li onclick="playVowel('capital')">⇧</li>
+        <li onclick="playVowel('space')">─</li>
+
       </ul>
-      <a href="spelling-practice.html" class="button">TO PRACTICE!</a>
+      <a href="spelling-practice.html" class="button" onclick="closeModal()">TO PRACTICE!</a>
+
+
     </div>
     <footer>"Desarrollado por Fernand J. Hanser"</footer>
   </div>
@@ -130,6 +135,8 @@
   <audio id="vowel_audio_x" src="audios/abc/x.mp3"></audio>
   <audio id="vowel_audio_y" src="audios/abc/y.mp3"></audio>
   <audio id="vowel_audio_z" src="audios/abc/z.mp3"></audio>
+  <audio id="vowel_audio_capital" src="audios/abc/capital.mp3"></audio>
+  <audio id="vowel_audio_space" src="audios/abc/space.mp3"></audio>
 
   <script src="script.js"></script>
 </body>
