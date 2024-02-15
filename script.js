@@ -148,16 +148,5 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Evento para comparar la entrada del usuario con la palabra mostrada en el modal
-  document.getElementById('check-word-button').addEventListener('click', function () {
-    var userInput = document.getElementById('user-input').value.toLowerCase().trim();
-    var modalWord = document.getElementById('modal-word').textContent.toLowerCase().trim();
-
-    if (userInput === randomWord.toLowerCase().trim()) {
-      document.getElementById('result-message').textContent = 'Correct!';
-      audioCorrect.play(); // Reproducir audio de respuesta correcta
-    } else {
-      document.getElementById('result-message').textContent = 'Incorrect. Try again.';
-      audioIncorrect.play(); // Reproducir audio de respuesta incorrecta
-    }
-  });
+  
 });
