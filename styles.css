@@ -66,53 +66,78 @@ h4 {
 
 .word-list ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 5px 5px;
+  /* Ajusta el margen superior e inferior */
   cursor: pointer;
-  /* Cambia el cursor a pointer */
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 0 auto;
+  border: 2px solid #1168b9;
+  border-radius: 5px;
+  padding: 15px 20px;
+  /* Ajusta el relleno vertical y horizontal */
   width: 180px;
   background-color: #1168b9;
   color: azure;
   font-size: 22px;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .word-list ul li:hover,
 .word-list ul li:active {
   background-color: darkorange;
-  /* Cambia el color de fondo cuando se pasa el cursor o se hace clic */
+  border-color: darkorange;
 }
 
 
+/* Estilos base */
 .abc ul {
   list-style-type: none;
   padding: 0;
-}
-
-.abc {
-  margin-top: 5px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .abc ul li {
-  display: inline-block;
-  margin: 0 10px;
+  min-width: 40px;
+  /* Tamaño mínimo para los botones */
+  max-width: 40px;
+  /* Tamaño máximo para los botones */
+  margin: 5px;
   cursor: pointer;
-  /* Cambia el cursor a pointer */
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 0 auto;
-  width: 12px;
+  border: 2px solid #1168b9;
+  border-radius: 5px;
+  padding: 15px 20px;
   background-color: #1168b9;
   color: azure;
   font-size: 22px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.abc ul li:hover,
+.abc ul li:hover {
+
+  border-color: darkorange;
+}
+
+
 .abc ul li:active {
-  background-color: darkorange;
-  /* Cambia el color de fondo cuando se pasa el cursor o se hace clic */
+
+  background-color: red;
+}
+
+/* Media query para ajustar estilos en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .abc ul li {
+    min-width: 40px;
+    /* Reducir el tamaño mínimo en pantallas más pequeñas */
+    max-width: 40px;
+    /* Reducir el tamaño máximo en pantallas más pequeñas */
+    margin: 5px;
+    /* Reducir el espacio entre los botones */
+    padding: 10px 15px;
+    /* Reducir el padding de los botones */
+    font-size: 18px;
+    /* Reducir el tamaño de fuente de los botones */
+  }
 }
 
 
@@ -188,13 +213,15 @@ p {
   background-color: #1168b9;
   color: azure;
   font-size: 22px;
+  transition: background-color 0.8s;
+  /* Agrega una transición suave para el cambio de color de fondo */
 }
 
-.word-list ul li:hover,
 .word-list ul li:active {
-  background-color: darkorange;
-  /* Cambia el color de fondo cuando se pasa el cursor o se hace clic */
+  background-color: red;
+  /* Cambia el color de fondo cuando se hace clic */
 }
+
 
 .button {
   display: inline-block;
@@ -306,5 +333,23 @@ p {
 
 #user-input:focus {
   border-color: dodgerblue;
-  /* Cambia el color del borde al enfocar */
+}
+
+#vowel-pronunciation-display {
+  width: 200px;
+  height: 60px;
+  background-color: darkorange;
+  border: 10px solid #1168b9;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 44px;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#vowel-pronunciation-display p {
+  color: white;
 }

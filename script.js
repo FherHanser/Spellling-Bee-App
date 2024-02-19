@@ -147,6 +147,103 @@ document.addEventListener('DOMContentLoaded', function () {
     audio.play();
   });
 
-  // Evento para comparar la entrada del usuario con la palabra mostrada en el modal
-  
 });
+
+function displayVowelPronunciation(vowel) {
+  let pronunciationDisplay = document.getElementById('vowel-pronunciation-display');
+  let pronunciation = '';
+
+  switch (vowel) {
+    case 'a':
+      pronunciation = "ei";
+      break;
+    case 'b':
+      pronunciation = "bi";
+      break;
+    case 'c':
+      pronunciation = "ci";
+      break;
+    case 'd':
+      pronunciation = "di";
+      break;
+    case 'e':
+      pronunciation = "i";
+      break;
+    case 'f':
+      pronunciation = "éf";
+      break;
+    case 'g':
+      pronunciation = "dji";
+      break;
+    case 'h':
+      pronunciation = "eitch";
+      break;
+    case 'i':
+      pronunciation = "ai";
+      break;
+    case 'j':
+      pronunciation = "djei";
+      break;
+    case 'k':
+      pronunciation = "kei";
+      break;
+    case 'l':
+      pronunciation = "él";
+      break;
+    case 'm':
+      pronunciation = "ém";
+      break;
+    case 'n':
+      pronunciation = "én";
+      break;
+    case 'o':
+      pronunciation = "ou";
+      break;
+    case 'p':
+      pronunciation = "pi";
+      break;
+    case 'q':
+      pronunciation = "quiú";
+      break;
+    case 'r':
+      pronunciation = "ar";
+      break;
+    case 's':
+      pronunciation = "és";
+      break;
+    case 't':
+      pronunciation = "ti";
+      break;
+    case 'u':
+      pronunciation = "iú";
+      break;
+    case 'v':
+      pronunciation = "vi";
+      break;
+    case 'w':
+      pronunciation = "dobliu";
+      break;
+    case 'x':
+      pronunciation = "écs";
+      break;
+    case 'y':
+      pronunciation = "uai";
+      break;
+    case 'z':
+      pronunciation = "zi";
+      break;
+    case 'capital':
+      pronunciation = "capitol";
+      break;
+    case 'space':
+      pronunciation = "espéis";
+      break;
+    default:
+      pronunciation = 'Pronunciación no disponible';
+  }
+
+  pronunciationDisplay.textContent = pronunciation;
+}
+
+
+

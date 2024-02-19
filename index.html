@@ -18,6 +18,8 @@
     <h1>Spelling Bee App</h1>
     <h4>for Andre's practice</h4>
     <h3>Words to practice</h3>
+    <div id="pronunciation-text"></div>
+
     <div class="word-list">
       <ul>
         <li onclick="showPronunciation('alphabetically')">alphabetically</li>
@@ -72,40 +74,40 @@
     <h3>Support alphabet</h3>
     <div class="abc">
       <ul>
-        <li onclick="playVowel('a')">a</li>
-        <li onclick="playVowel('b')">b</li>
-        <li onclick="playVowel('c')">c</li>
-        <li onclick="playVowel('d')">d</li>
-        <li onclick="playVowel('e')">e</li>
-        <li onclick="playVowel('f')">f</li>
-        <li onclick="playVowel('g')">g</li>
-        <li onclick="playVowel('h')">h</li>
-        <li onclick="playVowel('i')">i</li>
-        <li onclick="playVowel('j')">j</li>
-        <li onclick="playVowel('k')">k</li>
-        <li onclick="playVowel('l')">l</li>
-        <li onclick="playVowel('m')">m</li>
-        <li onclick="playVowel('n')">n</li>
-        <li onclick="playVowel('o')">o</li>
-        <li onclick="playVowel('p')">p</li>
-        <li onclick="playVowel('q')">q</li>
-        <li onclick="playVowel('r')">r</li>
-        <li onclick="playVowel('s')">s</li>
-        <li onclick="playVowel('t')">t</li>
-        <li onclick="playVowel('u')">u</li>
-        <li onclick="playVowel('v')">v</li>
-        <li onclick="playVowel('w')">w</li>
-        <li onclick="playVowel('x')">x</li>
-        <li onclick="playVowel('y')">y</li>
-        <li onclick="playVowel('z')">z</li>
-        <li onclick="playVowel('capital')">⇧</li>
-        <li onclick="playVowel('space')">─</li>
-
+        <li onclick="playVowel('a'); displayVowelPronunciation('a')">a</li>
+        <li onclick="playVowel('b'); displayVowelPronunciation('b')">b</li>
+        <li onclick="playVowel('c'); displayVowelPronunciation('c')">c</li>
+        <li onclick="playVowel('d'); displayVowelPronunciation('d')">d</li>
+        <li onclick="playVowel('e'); displayVowelPronunciation('e')">e</li>
+        <li onclick="playVowel('f'); displayVowelPronunciation('f')">f</li>
+        <li onclick="playVowel('g'); displayVowelPronunciation('g')">g</li>
+        <li onclick="playVowel('h'); displayVowelPronunciation('h')">h</li>
+        <li onclick="playVowel('i'); displayVowelPronunciation('i')">i</li>
+        <li onclick="playVowel('j'); displayVowelPronunciation('j')">j</li>
+        <li onclick="playVowel('k'); displayVowelPronunciation('k')">k</li>
+        <li onclick="playVowel('l'); displayVowelPronunciation('l')">l</li>
+        <li onclick="playVowel('m'); displayVowelPronunciation('m')">m</li>
+        <li onclick="playVowel('n'); displayVowelPronunciation('n')">n</li>
+        <li onclick="playVowel('o'); displayVowelPronunciation('o')">o</li>
+        <li onclick="playVowel('p'); displayVowelPronunciation('p')">p</li>
+        <li onclick="playVowel('q'); displayVowelPronunciation('q')">q</li>
+        <li onclick="playVowel('r'); displayVowelPronunciation('r')">r</li>
+        <li onclick="playVowel('s'); displayVowelPronunciation('s')">s</li>
+        <li onclick="playVowel('t'); displayVowelPronunciation('t')">t</li>
+        <li onclick="playVowel('u'); displayVowelPronunciation('u')">u</li>
+        <li onclick="playVowel('v'); displayVowelPronunciation('v')">v</li>
+        <li onclick="playVowel('w'); displayVowelPronunciation('w')">w</li>
+        <li onclick="playVowel('x'); displayVowelPronunciation('x')">x</li>
+        <li onclick="playVowel('y'); displayVowelPronunciation('y')">y</li>
+        <li onclick="playVowel('z'); displayVowelPronunciation('z')">z</li>
+        <li onclick="playVowel('capital'); displayVowelPronunciation('capital')">⇧</li>
+        <li onclick="playVowel('space'); displayVowelPronunciation('space')">─</li>
       </ul>
-
-
-
     </div>
+    <div id="vowel-pronunciation-display">
+      <p>diction</p>
+    </div>
+
     <footer>"Desarrollado por Fernand J. Hanser"</footer>
   </div>
   <!-- Elementos de audio para el abc-->
